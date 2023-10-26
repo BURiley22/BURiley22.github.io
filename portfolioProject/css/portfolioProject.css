@@ -1,0 +1,196 @@
+/*-------BASIC STYLING-----------*/
+
+body {
+    margin: 0%;
+    background-image: url("../images/forest_header.jpg");
+    background-attachment: fixed;
+}
+
+a {
+    color: #B0FA70;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 5%;
+    font-weight: bolder;
+}
+
+h1:hover {
+    background-color: #8570FA;
+    color: antiquewhite;
+}
+
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    font-size: 22px;
+    letter-spacing: 1.25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+q {
+    font-style: italic;
+}
+
+.center {
+    text-align: center;
+}
+
+footer {
+    padding: 2px;
+    background-color: #8570FA;
+    text-align: center;
+    font-size: small;
+}
+
+/*------NAVBAR----------*/
+
+.Navbar {
+    overflow: hidden;
+    background-color: #8570FA;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+}
+
+.Navbar a {
+    float: left;
+    display: block;
+    color: #FA8072;
+    padding: 12px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+.Navbar a:hover {
+    background-color: #BEFA70;
+    color: #8570FA;
+    font-weight: bold;
+}
+
+/*----------HEAD PHOTO----------*/
+
+#forestScene {
+    position: fixed;
+    min-width: 100%;
+    right: 0;
+    bottom: 0;
+}
+
+/*-------COLUMNS----------*/
+
+* {
+    box-sizing: border-box;
+}
+
+.column_1 {
+    float: left;
+    width: 50%;
+    padding: 12px;
+    padding-top: 2%;
+    height: 400px;
+    background-color: gray;
+}
+
+@media screen and (max-width: 576px) {
+    .column_1 {
+        overflow: auto;
+    }
+}
+
+.column_2 {
+    float: left;
+    width: 50%;
+    padding: 12px;
+    padding-top: 2%;
+    height: 400px;
+    background-color: silver;
+}
+
+.column_tall {
+    padding: 2.5%;
+    height: 500px;
+}
+
+.Row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*-------IMAGE STYLE---------*/
+
+
+img {
+    filter: grayscale(75%);
+    border-radius: 8px;
+    max-width: 100%;
+    height: 340px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img:hover {
+    filter: grayscale(5%);
+}
+
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+/*-------CONTACT FORM------------*/
+
+input[type=text] {
+    width: 80%;
+    padding: 20px;
+    border: #8570FA;
+    border-radius: 7px;
+    box-sizing: border-box;
+    margin-top: 7px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type=text]:hover {
+    box-shadow: 1 1 3px #FA8072 inset;
+}
+
+/*-----SUBMIT BUTTON---------*/
+
+input[type=submit] {
+    background-color: #BEFA70;
+    color: #8570FA;
+    font-weight: bold;
+    padding: 12px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type=submit]:hover {
+    background-color: #8570FA;
+    color: #FA8072;
+}
+
+form {
+    border-radius: 4px;
+    padding: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+}
