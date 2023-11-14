@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html>
+
     <!--Head-->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" />
-        <title>Benjamin R.</title>
-        <link rel="stylesheet" type="text/css" href="./css/portfolioProject.css">
+        <title>@**Benjamin_Riley**@</title>
+        <link rel="shortcut icon" type="img/jpg" href="images/coding_icon.png">
+        <link rel="stylesheet" type="text/css" href="css/portfolioProject.css">
     </head>
 
     <body class="Background">
+        
 
         <!--------Navbar-------->
 
         <div class="Navbar">
             <a href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a> <!----Added this section----->
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
 
-        <!--Breaks inserted to add space between navbar and the first heading-->
-         <br>
-         <br>
+        <div id="Home">
+            <video autoplay muted loop id="Typing_Video">
+                <source src="images/video/forest.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
 
         <!--BACKGROUND IMAGE & TEXT-->
-        <div id="Home">
-            <h1>Benjamin Riley's Portfolio</h1>
+        <div class="Video_Text">
+            <h1 class="white-text">Benjamin Riley's Portfolio</h1>
             <strong>
                 <p class="center">
                     <q>Real generosity towards the future lies in giving all to the present.</q>
@@ -36,7 +43,33 @@
                     <br>more about my software development abilities!</p>
                 </p>
             </strong>
+        </div>
 
+        <!----Slideshow section------------>
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/html-css-js.jpeg" alt="">
+                        <div class="text">I have experience in HTML5, JavaScript & CSS3</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="images/email.jpg" alt="">
+                        <div class="text">Feel free to contact me about your future project!</div>
+                    </div>
+
+                    <!---Previous and Next buttons---------->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                <!-------Dots for slideshow navigation--------->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                </div>
+            </div>
         </div>
 
 
@@ -58,14 +91,14 @@
                     Currently I have experience in HTML and CSS.  My goal is to add JavaScript, SQL and others to my repository.  
                     <br>
                     <br>
-                    Experience is a great teacher, if you would like to work with me, please <a href="#Contact">contact</a> me using the form below.
+                    Experience is a great teacher, if you would like to help add to my experience and work with me, please <a href="#Contact">contact</a> me using the form below.
                     <br>
                     <br>
                 </p>
             </div>
         </div>
 
-        <!------GITHUB-------->
+        <!------GITHUB Section-------->
 
         <div class="Row" id="GitHub">
             <div class="column_1">
@@ -79,39 +112,34 @@
             </div>
         </div>
 
+        <!-----Contact Section---------->
         <div class="Row" id="Contact">
-            <div class="column_2 column_tall">
-                <img src="./images/email.jpg" alt="typing email">
-            </div>
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/f/xnqkwgkd" method="POST" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Type your name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                        <input type="text" placeholder="Type your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Type your email address here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                        <input type="text" placeholder="Type your message here" name="message">
 
-            <div class="column_1 column_tall">
-                <h1 id="Contact">Contact</h1>
-                <form action="" method="post">
-                    <label>Name:</label>
-                    <input type="text" placeholder="Please enter your name here">
-                    <br>
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <br>
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
-                    <br>
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
         </div>
         
-        <!-----FOOTER-------->
+        <!-----FOOTER section-------->
         <footer>
             <p>
                 <p class="center">Author: Benjamin R.</p>
                 <br>
             </p>
         </footer>
-
-
-
-        
+        <script src="js/portfolioProject.js"></script>
     </body>
-
 </html>
